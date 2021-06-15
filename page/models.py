@@ -1,6 +1,7 @@
 from django.db import models
 from django.core.validators import MaxValueValidator, MinValueValidator 
 from django.db.models.fields import CharField, TextField
+from django.utils import timezone
 
 class movie(models.Model):
     original_name = models.CharField(max_length=100)
@@ -21,7 +22,16 @@ class movie(models.Model):
     )
     
     rate = models.SmallIntegerField(validators=[MaxValueValidator(5)],
-                                                choices=RATE_CHOICES,
-                                                default=0)
+                                    choices=RATE_CHOICES,
+                                    default=0)
+    
+def publish(self):
+        self.published_date = timezone.now()
+        self.original_name
+        self.save()
+
+def __str__(self):
+        peli=self.original_name
+        return peli
 
 
