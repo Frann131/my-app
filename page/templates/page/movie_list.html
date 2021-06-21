@@ -1,6 +1,17 @@
 <html>
-<body>
-    <p>Hi there!</p>
-    <p>It works!</p>
-</body>
+    <head>
+        <title>Peliculas</title>
+    </head>
+    <body>
+        <div>
+            <h1><a href="/">Peliculas</a></h1>
+        </div>
+    {% for movie in movies %}
+        <div>
+            <h2><a href="">{{ movie.originalName }}</a></h2>
+            <p> Año: {{ movie.year }}</p>
+            <p> Valoración: {{ movie.rate|linebreaksbr }} estrellas </p>
+        </div>
+    {% endfor %}
+    </body>
 </html>
