@@ -1,23 +1,11 @@
-{% load static %}
+{% extends 'page/base.html' %}
 
-<html>
-    <head>
-        <link href="//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
-        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
-        <link rel="stylesheet" href="{% static 'css/page.css' %}">
-        <title>Peliculas</title>
-    </head>
-    <body>
-        <div>
-            <h1><a href="/">Peliculas</a></h1>
-        </div>
+{% block content %}
     {% for movie in movies %}
-        <div>
-            <h2><a href="">{{ movie.originalName }}</a></h2>
-            <p> Año: {{ movie.year }}</p>
-            <p> Valoración: {{ movie.rate|linebreaksbr }} estrellas </p>
-        </div>
+    <div class="movie">
+        <h2><a href="{% url 'movie_detail' pk=movie.pk %}">{{ movie.originalName }}</a></h2>
+        <h4><a> Año: {{ movie.year }}</a></h4>
+        <h4><a> Valoración: {{ movie.rate|linebreaksbr }} ⭐ </a></h4>
+    </div>
     {% endfor %}
-    </body>
-</html>
+{% endblock %}

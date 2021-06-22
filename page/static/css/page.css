@@ -1,6 +1,63 @@
 h1 a, h2 a {
     color: #00b7ff;
-    font-family: 'Lobster';}
+    font-family: 'Bebas Neue', cursive;
+}
 body {
     padding-left: 20px;
+    background-color: #e2e2e2
+}
+h4 a {
+    color: #d8d8d8;
+    font-family: 'Bebas Neue', cursive;
+}
+.page-header {
+    background-color: #00b7ff;
+    margin-top: 0;
+    padding: 20px 20px 20px 40px;
+}
+
+.page-header h1, .page-header h1 a, .page-header h1 a:visited, .page-header h1 a:active {
+    color: #dadada;
+    font-size: 36pt;
+    text-decoration: none;
+}
+
+.content {
+    margin-left: 40px;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Bebas Neue', cursive;
+}
+
+.date {
+    color: #e2e2e2;
+}
+
+.save {
+    float: right;
+}
+
+.movie-form textarea, .movie-form input {
+    width: 100%;
+}
+
+.top-menu, .top-menu:hover, .top-menu:visited {
+    color: #00b7ff;
+    float: right;
+    font-size: 26pt;
+    margin-right: 20px;
+}
+
+.movie {
+    margin-bottom: 70px;
+}
+
+.movie h2 a, .movie h2 a:visited {
+    color: #00b7ff;
+}
+
+h2 b, h3 b {
+    color: #d8d8d8;
+    font-family: 'Bebas Neue', cursive;
 }

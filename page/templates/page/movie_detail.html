@@ -1,0 +1,14 @@
+{% extends 'page/base.html' %}
+
+{% block content %}
+    <div class="movie">
+        <h2><a>Título: {{ movie.originalName }} </a></h2>
+        <h4><a>Nombre en España: {{ movie.nameInSpain }}</a></h4>
+        <h4><a>Año: {{ movie.year }}</h4>
+        <h4><a>Valoración: {{ movie.rate }} ⭐</a></h4>
+        <h4><a>Director: {{ movie.director }} </a></h4>
+        <h4><a>Duración: {{ movie.duration }} minutos </a></h4>
+        <h4><a>Sinópsis: {{ movie.sinopsis }} </a></h4>
+        <h4><a>Géneros: {{ movie.genres }} </a></h4>
+    </div>
+{% endblock %}
