@@ -1,6 +1,5 @@
 from django.urls import path
 from . import views
-from .forms import MovieForm
 
 urlpatterns = [
     path('', views.movie_list, name='movie_list'),
