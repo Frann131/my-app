@@ -2,6 +2,9 @@
 
 {% block content %}
     <div class="movie">
+        {% if user.is_authenticated %}
+            <a class="btn btn-default" href="{% url 'movie_edit' pk=movie.pk %}"><span class="glyphicon glyphicon-pencil"></span></a>
+        {% endif %}
         <h2><a>{{ movie.originalName }} </a></h2>
         <h4><a>Nombre en España: {{ movie.nameInSpain }}</a></h4>
         <h4><a>Año: {{ movie.year }}</h4>

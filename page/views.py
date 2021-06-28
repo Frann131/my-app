@@ -17,9 +17,21 @@ def movie_new(request):
     if request.method == "POST":
         form = MovieForm(request.POST)
         if form.is_valid():
-            post = form.save()
-            post.save()
+            movie = form.save()
+            movie.save()
             return redirect('movie_detail', pk=movie.pk)
     else:
         form = MovieForm()
+    return render(request, 'page/movie_edit.html', {'form': form})
+
+def movie_edit(request, pk):
+    movie = get_object_or_404(Movie, pk=pk)
+    if request.method == "POST":
+        form = MovieForm(request.POST, instance=Movie)
+        if form.is_valid():
+            movie = form.save()
+            movie.save()
+            return redirect('movie_detail', pk=movie.pk)
+    else:
+        form = MovieForm(instance=movie)
     return render(request, 'page/movie_edit.html', {'form': form})
