@@ -14,5 +14,5 @@ class MovieForm(forms.ModelForm):
             'director': forms.TextInput(attrs={'placeholder': 'Nombre del director'}),
             'duration': forms.TextInput(attrs={'placeholder': 'Minutos'}),
             'sinopsis': forms.TextInput(attrs={'placeholder': 'Breve resumen de la trama'}),
-            'rate': forms.TextInput(attrs={'placeholder': 'Separados por coma'}),
+            'genres': forms.TextInput(attrs={'placeholder': 'Separados por coma'}),
         }
